@@ -1,0 +1,85 @@
+/* 
+        <label for="searchbar" class="input input--square">
+            <span class="fas fa-search"></span>
+            <input class="input__text  validate" id="searchbar" type="text" placeholder="Write here">
+        </label>
+*/ 
+
+.input__text{
+    display: inline-block;
+    margin: 1rem 0;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    border: 2px solid darken($clr-primary, 25);
+    color: darken($clr-primary, 10);
+    background-color: $clr-neutral-light;
+    cursor: text;
+    &::placeholder{
+        color: $clr-primary;
+    }
+    &__text{
+        font-size: 1rem;
+        border: none;
+        &:focus{
+            outline: none;
+        }
+    }
+    &--square{
+        border-radius: 0;
+    }
+}
+.input__checkbox{
+    display: inline-block;
+    position: relative;
+    margin: 1rem auto;
+    width: 90px;
+    height: 34px;
+    input[type="checkbox"]{
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+    span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        background-color: #c0c0c0;
+        transition: .4s;
+    }
+    span::before{
+        content: "";
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: $clr-neutral-light;
+        transition: .4s;
+    }
+    input[type="checkbox"]:checked + span{
+        background-color: $clr-confirm;
+    }
+    input[type="checkbox"]:checked + span::before{
+        transform: translateX(56px);
+    }
+    &--disabled{
+        span{
+            cursor: default;
+            background-color:#dfdfdf !important;
+        }
+    }
+    &--round{
+        @extend .input__checkbox;
+        span{
+            border-radius: 34px;
+        }
+        span::before{
+            border-radius: 50%;
+        }
+    }
+}
+    

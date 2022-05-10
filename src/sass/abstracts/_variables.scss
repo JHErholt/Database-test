@@ -1,0 +1,29 @@
+// Colors
+$clr-primary: rgb(178, 34, 34);
+$clr-secondary: rgb(14, 10, 67);
+
+$clr-neutral-light: rgb(255, 255, 255);
+$clr-neutral-dark: rgb(0, 0, 0);
+
+$clr-confirm: rgb(54, 179, 54);
+$clr-danger: rgb(205, 92, 92);
+// Offsets
+$offset-x-small: 10px; 
+$offset-small: 20px; 
+$offset-medium: 40px; 
+$offset-large: 80px;
+
+// Font family
+$font-family-title: 'Staatliches', cursive;
+$font-family-text: 'Spartan', sans-serif;
+$font-family-lorem: 'Flow Circular', cursive;
+
+// Font size
+$font-size-100: 0.914em;
+$font-size-200: 1.112em; 
+$font-size-300: 1.213em;
+$font-size-400: 1.432em;
+$font-size-500: 1.6em;
+$font-size-600: 1.8em;
+$font-size-700: 2em;
+$font-size-800: 2.4em;

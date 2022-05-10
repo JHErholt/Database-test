@@ -1,0 +1,78 @@
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+
+    &__background{
+        transition: .3s;
+        overflow: auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+        overflow-y: hidden;
+    }
+    &__close{
+        z-index: 6;
+        display: flex;
+        position: absolute;
+        background-color: black;
+        padding: 10px;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+    }
+    &__content{
+        position: relative;
+        background-color: white;
+        margin: auto;
+        padding: 2rem;
+        width: 80%;
+        top: calc(100vh + 100px);
+        transition: 1s;
+        
+
+        h1{
+            padding-bottom: 1.4rem;
+        }
+        p{
+            padding-bottom: 2rem;
+        }
+        // p:first-of-type{
+        //     font-weight: 600;
+        //     padding-bottom: 1rem;
+        // }
+
+    }
+}
+
+
+@media only screen and (min-width: 350px) {
+
+}
+@media only screen and (min-width: 767px) {
+
+}
+@media only screen and (min-width: 992px) {
+    .modal{
+        &__close{
+            right: -42px;
+        }
+        &__content{
+            width: 50%;
+        }
+    }
+}
+@media only screen and (min-width: 1200px) {
+    
+}
+@media only screen and (min-width: 2000px) {
+
+}

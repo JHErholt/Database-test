@@ -1,0 +1,79 @@
+/* 
+<button class="btn btn--primary btn--square">Click me</button>
+<button class="btn btn--danger btn--square">Click me</button>
+*/ 
+
+.btn{
+    color: $clr-neutral-light;
+    padding: 1rem 2rem;
+    transition: .4s;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    &--square{
+        border-radius: 0;
+    }
+    &--primary{
+        color: $clr-neutral-light;
+        background-color: $clr-primary;
+        &:hover{
+            background-color: darken($clr-primary, 5);
+        }
+    }
+    &--primary-border{
+        color: $clr-primary;
+        border: solid 2px $clr-primary;
+        &:hover{
+            color: $clr-neutral-light;
+            background-color: $clr-primary;
+        }
+    }
+
+    &--secondary{
+        color: $clr-neutral-light;
+        background-color: $clr-secondary;
+        &:hover{
+            background-color: darken($clr-secondary, 5);
+        }
+    }
+    &--secondary-border{
+        color: $clr-secondary;
+        border: solid 2px $clr-secondary;
+        &:hover{
+            color: $clr-neutral-light;
+            background-color: $clr-secondary;
+        }
+    }
+
+    &--confirm{
+        color: $clr-neutral-light;
+        background-color: $clr-confirm;
+        margin: 0 1rem;
+        &:hover{
+            background-color: darken($clr-confirm, 5);
+        }
+    }
+    &--confirm-border{
+        background: $clr-neutral-light;
+        color: $clr-neutral-dark;
+        border: solid 2px #c0c0c0;
+        &:hover{
+            background: darken($clr-neutral-light, 5);
+        }
+    }
+    &--danger{
+        color: $clr-neutral-light;
+        margin: 0 1rem;
+        background-color: $clr-danger;
+        &:hover{
+            background-color: darken($clr-danger, 5);
+        }
+    }
+
+}
+.btn:last-of-type{
+    margin-right: 0rem;
+}
+.btn:first-of-type{
+    margin-left: 0rem;
+}
